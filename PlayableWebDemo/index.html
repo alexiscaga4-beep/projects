@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Arcane Survival 3D - Isometric Action RPG</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="game-container">
+    <!-- Overlay HUD (Responsive for all aspect ratios & screen sizes) -->
+    <div id="hud">
+      <div class="hud-top">
+        <div class="stat-card hp-card">
+          <div class="stat-label">LIZARD WIZARD HP</div>
+          <div class="bar-container">
+            <div id="hp-bar-fill" class="bar-fill hp-fill"></div>
+            <span id="hp-text" class="bar-text">100 / 100</span>
+          </div>
+        </div>
+
+        <div class="timer-card">
+          <div class="stat-label">SURVIVAL TIME</div>
+          <div id="timer-display" class="timer-text">00:00</div>
+        </div>
+
+        <div class="stat-card xp-card">
+          <div class="xp-header">
+            <span class="stat-label">ARCANE XP</span>
+            <span id="level-display" class="level-badge">LV. 1</span>
+          </div>
+          <div class="bar-container">
+            <div id="xp-bar-fill" class="bar-fill xp-fill"></div>
+            <span id="xp-text" class="bar-text">0 / 50</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hud-bottom">
+        <div id="kills-display" class="kills-badge">⚔️ FOES SLAIN: 0</div>
+        <div class="controls-hint">WASD / Arrows to Move • Mobile Drag Joystick • Auto-Aim 3D Fireballs</div>
+      </div>
+    </div>
+
+    <!-- Game Over Modal -->
+    <div id="game-over-modal" class="modal hidden">
+      <div class="modal-card">
+        <h1 class="game-over-title">SURVIVAL FAILED</h1>
+        <p class="game-over-subtitle">The swarm has overpowered the Lizard Wizard.</p>
+        
+        <div class="final-stats">
+          <div class="stat-row">
+            <span>Time Survived:</span>
+            <strong id="final-time">00:00</strong>
+          </div>
+          <div class="stat-row">
+            <span>Monsters Slain:</span>
+            <strong id="final-kills">0</strong>
+          </div>
+          <div class="stat-row">
+            <span>Final Level:</span>
+            <strong id="final-level">1</strong>
+          </div>
+        </div>
+
+        <button id="restart-btn" class="glow-button">RESTART EXPEDITION (Press R)</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game3d.bundle.js"></script>
+</body>
+</html>

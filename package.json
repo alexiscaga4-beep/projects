@@ -1,0 +1,28 @@
+{
+  "name": "arcane-survival-3d",
+  "version": "1.0.0",
+  "description": "Arcane Survival: 3D Isometric Action RPG built with Three.js and Unity C#",
+  "main": "PlayableWebDemo/server.js",
+  "scripts": {
+    "dev": "node PlayableWebDemo/server.js",
+    "start": "node PlayableWebDemo/server.js",
+    "build": "npx esbuild PlayableWebDemo/src/game3d.js --bundle --outfile=PlayableWebDemo/game3d.bundle.js --format=iife --minify",
+    "host": "npx localtunnel --port 3000 --subdomain arcane-survival-3d"
+  },
+  "keywords": [
+    "threejs",
+    "3d",
+    "game",
+    "isometric",
+    "rpg",
+    "vampire-survivors"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
